@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,8 @@ public class CartController {
 	
 	@Autowired
 	private ItemRepository itemRepository;
+
+	private static final Logger log = LogManager.getLogger(CartController.class);
 	
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
@@ -45,6 +49,7 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
+		log.info("Adding to cart for user " + user.getUsername());
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
@@ -62,6 +67,8 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
+
+		log.info("Removing from cart for user " + user.getUsername());
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}
