@@ -1,36 +1,100 @@
-2021-02-19 19:29:13,846 INFO o.s.b.StartupInfoLogger [main] Starting SareetaApplication on Davids-MacBook-Pro.local with PID 84354 (started by davidlimcheng in /Users/davidlimcheng/Learning/Repositories/udacity - java web developer/lesson5/nd035-c4-Security-and-DevOps)
-2021-02-19 19:29:13,864 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-02-19 19:29:14,586 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-02-19 19:29:14,650 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55ms. Found 4 repository interfaces.
-2021-02-19 19:29:15,154 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d883c7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-02-19 19:29:15,444 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2021-02-19 19:29:15,458 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2021-02-19 19:29:15,474 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2021-02-19 19:29:15,475 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
-2021-02-19 19:29:15,608 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2021-02-19 19:29:15,609 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1650 ms
-2021-02-19 19:29:15,803 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2021-02-19 19:29:15,970 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2021-02-19 19:29:16,028 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+2021-02-19 19:47:05,443 INFO o.s.b.StartupInfoLogger [main] Starting SareetaApplication on Davids-MacBook-Pro.local with PID 85012 (started by davidlimcheng in /Users/davidlimcheng/Learning/Repositories/udacity - java web developer/lesson5/nd035-c4-Security-and-DevOps)
+2021-02-19 19:47:05,454 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-19 19:47:06,071 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-19 19:47:06,176 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 94ms. Found 4 repository interfaces.
+2021-02-19 19:47:06,748 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fabf660] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-19 19:47:06,987 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2021-02-19 19:47:06,999 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2021-02-19 19:47:07,009 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2021-02-19 19:47:07,010 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-02-19 19:47:07,123 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-02-19 19:47:07,124 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1608 ms
+2021-02-19 19:47:07,302 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-02-19 19:47:07,552 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-02-19 19:47:07,627 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2021-02-19 19:29:16,093 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
-2021-02-19 19:29:16,095 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
-2021-02-19 19:29:16,231 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-02-19 19:29:16,367 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-02-19 19:29:17,153 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-02-19 19:29:17,759 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-02-19 19:29:17,840 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48126a17, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6a0962, org.springframework.security.web.header.HeaderWriterFilter@3702d0ed, org.springframework.web.filter.CorsFilter@1a7437d8, org.springframework.security.web.authentication.logout.LogoutFilter@782143e8, com.example.demo.security.JWTAuthenticationFilter@6f695077, com.example.demo.security.JWTAuthenticationVerificationFilter@5b31a9e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@515d615, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66859ea9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@282240, org.springframework.security.web.session.SessionManagementFilter@705d72f0, org.springframework.security.web.access.ExceptionTranslationFilter@6ab826bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dfab58d]
-2021-02-19 19:29:17,955 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2021-02-19 19:29:18,124 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2021-02-19 19:29:18,161 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2021-02-19 19:29:18,163 INFO o.s.b.StartupInfoLogger [main] Started SareetaApplication in 4.738 seconds (JVM running for 5.39)
-2021-02-19 19:29:20,190 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-02-19 19:29:20,190 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2021-02-19 19:29:20,200 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
-2021-02-19 19:29:20,473 INFO c.e.d.c.UserController [http-nio-8080-exec-1] Successfully created user David
-2021-02-19 19:29:25,824 INFO o.h.h.i.QueryTranslatorFactoryInitiator [http-nio-8080-exec-3] HHH000397: Using ASTQueryTranslatorFactory
-2021-02-19 19:30:51,269 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
-2021-02-19 19:30:51,271 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-02-19 19:30:51,274 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
-2021-02-19 19:30:51,276 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
+2021-02-19 19:47:07,692 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-02-19 19:47:07,694 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-02-19 19:47:07,877 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-02-19 19:47:08,000 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-19 19:47:08,694 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-19 19:47:09,635 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-19 19:47:09,714 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a17ffee, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f1a5b93, org.springframework.security.web.header.HeaderWriterFilter@486bcaa, org.springframework.web.filter.CorsFilter@7ffc4195, org.springframework.security.web.authentication.logout.LogoutFilter@279e8bc0, com.example.demo.security.JWTAuthenticationFilter@7ce760af, com.example.demo.security.JWTAuthenticationVerificationFilter@3e4636c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dd2ea0a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e7e4480, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b6b466a, org.springframework.security.web.session.SessionManagementFilter@2f3a0f37, org.springframework.security.web.access.ExceptionTranslationFilter@12dc702b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54780c40]
+2021-02-19 19:47:09,832 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-19 19:47:09,992 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2021-02-19 19:47:10,036 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-19 19:47:10,038 INFO o.s.b.StartupInfoLogger [main] Started SareetaApplication in 5.028 seconds (JVM running for 5.897)
+2021-02-19 19:47:17,803 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-19 19:47:17,803 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-02-19 19:47:17,812 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
+2021-02-19 19:47:18,108 INFO c.e.d.c.UserController [http-nio-8080-exec-2] Successfully created user David
+2021-02-19 19:47:26,103 INFO c.e.d.c.UserController [http-nio-8080-exec-3] Successfully created user Human
+2021-02-19 19:47:29,661 INFO c.e.d.c.UserController [http-nio-8080-exec-4] Successfully created user Robot
+2021-02-19 19:47:30,608 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-5] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:47:30,608 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-5] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 3"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:47:30,614 WARN c.e.d.c.UserController [http-nio-8080-exec-5] Failed to create user Robot, error: exception thrown
+2021-02-19 19:47:30,615 WARN c.e.d.c.UserController [http-nio-8080-exec-5] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 3"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:47:33,859 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-6] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:47:33,859 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-6] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:47:33,860 WARN c.e.d.c.UserController [http-nio-8080-exec-6] Failed to create user David, error: exception thrown
+2021-02-19 19:47:33,860 WARN c.e.d.c.UserController [http-nio-8080-exec-6] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:47:38,692 INFO o.h.h.i.QueryTranslatorFactoryInitiator [http-nio-8080-exec-7] HHH000397: Using ASTQueryTranslatorFactory
+2021-02-19 19:47:51,473 INFO c.e.d.c.CartController [http-nio-8080-exec-8] Successfully added to cart for user David
+2021-02-19 19:47:55,057 INFO c.e.d.c.CartController [http-nio-8080-exec-9] Successfully added to cart for user David
+2021-02-19 19:47:57,302 INFO c.e.d.c.CartController [http-nio-8080-exec-10] Successfully added to cart for user David
+2021-02-19 19:48:01,121 INFO c.e.d.c.CartController [http-nio-8080-exec-1] Successfully added to cart for user Human
+2021-02-19 19:48:14,768 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-3] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:48:14,770 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-3] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:48:14,771 WARN c.e.d.c.UserController [http-nio-8080-exec-3] Failed to create user David, error: exception thrown
+2021-02-19 19:48:14,771 WARN c.e.d.c.UserController [http-nio-8080-exec-3] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:48:15,207 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-4] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:48:15,207 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-4] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:48:15,208 WARN c.e.d.c.UserController [http-nio-8080-exec-4] Failed to create user David, error: exception thrown
+2021-02-19 19:48:15,208 WARN c.e.d.c.UserController [http-nio-8080-exec-4] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:48:15,771 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-5] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:48:15,771 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-5] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:48:15,771 WARN c.e.d.c.UserController [http-nio-8080-exec-5] Failed to create user David, error: exception thrown
+2021-02-19 19:48:15,772 WARN c.e.d.c.UserController [http-nio-8080-exec-5] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:48:16,316 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-6] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:48:16,317 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-6] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:48:16,317 WARN c.e.d.c.UserController [http-nio-8080-exec-6] Failed to create user David, error: exception thrown
+2021-02-19 19:48:16,317 WARN c.e.d.c.UserController [http-nio-8080-exec-6] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:48:16,879 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-7] SQL Error: 23505, SQLState: 23505
+2021-02-19 19:48:16,880 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8080-exec-7] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]
+2021-02-19 19:48:16,882 WARN c.e.d.c.UserController [http-nio-8080-exec-7] Failed to create user David, error: exception thrown
+2021-02-19 19:48:16,882 WARN c.e.d.c.UserController [http-nio-8080-exec-7] org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 1"; SQL statement:
+insert into user (id, cart_id, password, username) values (null, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+2021-02-19 19:48:20,371 INFO c.e.d.c.OrderController [http-nio-8080-exec-8] Successfully submitted order with items [com.example.demo.model.persistence.Item@21, com.example.demo.model.persistence.Item@21, com.example.demo.model.persistence.Item@21, com.example.demo.model.persistence.Item@20, com.example.demo.model.persistence.Item@20, com.example.demo.model.persistence.Item@20, com.example.demo.model.persistence.Item@20]for user David
+2021-02-19 19:48:26,635 INFO c.e.d.c.OrderController [http-nio-8080-exec-9] Successfully submitted order with items []for user Robot
+2021-02-19 19:48:32,968 WARN c.e.d.c.OrderController [http-nio-8080-exec-10] Failed to submit order for user What, error: user not found
+2021-02-19 19:48:34,767 WARN c.e.d.c.OrderController [http-nio-8080-exec-1] Failed to submit order for user What, error: user not found
+2021-02-19 19:48:35,544 WARN c.e.d.c.OrderController [http-nio-8080-exec-2] Failed to submit order for user What, error: user not found
+2021-02-19 19:48:39,478 WARN c.e.d.c.OrderController [http-nio-8080-exec-3] Failed to submit order for user The, error: user not found
+2021-02-19 19:48:40,022 WARN c.e.d.c.OrderController [http-nio-8080-exec-4] Failed to submit order for user The, error: user not found
+2021-02-19 19:48:43,763 WARN c.e.d.c.OrderController [http-nio-8080-exec-5] Failed to submit order for user Heck, error: user not found
+2021-02-19 19:48:43,974 WARN c.e.d.c.OrderController [http-nio-8080-exec-6] Failed to submit order for user Heck, error: user not found
+2021-02-19 19:48:44,461 WARN c.e.d.c.OrderController [http-nio-8080-exec-7] Failed to submit order for user Heck, error: user not found
+2021-02-19 19:48:47,489 WARN c.e.d.c.OrderController [http-nio-8080-exec-8] Failed to submit order for user Is, error: user not found
+2021-02-19 19:48:50,997 WARN c.e.d.c.OrderController [http-nio-8080-exec-9] Failed to submit order for user Happening, error: user not found
+2021-02-19 19:48:51,519 WARN c.e.d.c.OrderController [http-nio-8080-exec-10] Failed to submit order for user Happening, error: user not found
+2021-02-19 19:48:51,941 WARN c.e.d.c.OrderController [http-nio-8080-exec-1] Failed to submit order for user Happening, error: user not found
+2021-02-19 19:48:52,407 WARN c.e.d.c.OrderController [http-nio-8080-exec-2] Failed to submit order for user Happening, error: user not found
+2021-02-19 19:49:00,391 INFO c.e.d.c.UserController [http-nio-8080-exec-3] Successfully created user Heyoooo
+2021-02-19 19:49:03,121 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-19 19:49:03,122 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-19 19:49:03,131 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2021-02-19 19:49:03,134 INFO c.z.h.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
