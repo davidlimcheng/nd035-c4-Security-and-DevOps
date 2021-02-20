@@ -40,17 +40,24 @@ public class CartController {
 	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
+			log.warn("Failed to add to cart for user " + request.getUsername() + ", error: user not found");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			log.warn("Failed to add to cart for item id " + request.getItemId() + ", error: item id not found");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
-		log.info("Adding to cart for user " + user.getUsername());
-		cartRepository.save(cart);
+		try {
+			cartRepository.save(cart);
+			log.info("Successfully added to cart for user " + request.getUsername());
+		} catch (Exception e) {
+			log.warn("Failed to add to cart for user " + user.getUsername() + ", error: exception thrown");
+			log.warn(e);
+		}
 		return ResponseEntity.ok(cart);
 	}
 	
@@ -58,18 +65,25 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
+			log.warn("Failed to remove from cart for user " + request.getUsername() + ", error: user not found");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
+			log.warn("Failed to remove from cart for item id " + request.getItemId() + ", error: item id not found");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
 
-		log.info("Removing from cart for user " + user.getUsername());
-		cartRepository.save(cart);
+		try {
+			cartRepository.save(cart);
+			log.info("Successfully removed from cart for user " + request.getUsername());
+		} catch (Exception e) {
+			log.warn("Failed to remove from cart for user " + user.getUsername() + ", error: exception thrown");
+			log.warn(e);
+		}
 		return ResponseEntity.ok(cart);
 	}
 		

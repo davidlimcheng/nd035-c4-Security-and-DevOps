@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.UserOrder;
-import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.OrderRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 
@@ -35,11 +33,17 @@ public class OrderController {
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
+			log.warn("Failed to submit order for user " + username + ", error: user not found");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
-		log.info("Creating new order with items " + order.getItems() + "for user " + user.getUsername() );
-		orderRepository.save(order);
+		try {
+			orderRepository.save(order);
+			log.info("Successfully submitted order with items " + order.getItems() + "for user " + user.getUsername() );
+		} catch (Exception e) {
+			log.warn("Failed to submit order with items " + order.getItems() + "for user " + user.getUsername() + ", error: exception thrown");
+			log.warn(e);
+		}
 		return ResponseEntity.ok(order);
 	}
 	

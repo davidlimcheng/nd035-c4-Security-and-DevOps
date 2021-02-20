@@ -1,7 +1,5 @@
 package com.example.demo.controllers;
 
-import java.util.Optional;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,12 +56,18 @@ public class UserController {
 		if (createUserRequest.getPassword().length() < 7 ||
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())
 		) {
+			log.warn("Failed to create user " + createUserRequest.getUsername() + ", error: password requirements not met");
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
-		log.info("Creating new user with username " + user.getUsername());
-		userRepository.save(user);
+		try {
+			userRepository.save(user);
+			log.info("Successfully created user " + createUserRequest.getUsername());
+		} catch(Exception e) {
+			log.warn("Failed to create user " + createUserRequest.getUsername() + ", error: exception thrown");
+			log.warn(e);
+		}
 		return ResponseEntity.ok(user);
 	}
 	
