@@ -1,3 +1,40 @@
+# Submission: Screenshots
+## Splunk
+
+Logs were generated using the `spring-boot-starter-log4j2` library and configured via `log4j2-spring.xml`.
+Generated logs were manually uploaded to a local Splunk Enterprise instance, and fields were created, including "message".
+Most of the SPL queries are achieved with the "message" custom field.
+
+### Errors per second
+
+Panel
+
+![Errors per second graph](./images/errors_per_second_graph.png)
+
+Query
+
+![Errors per second query](./images/errors_per_second_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."error"."%") | timechart span=1s count by rate
+```
+
+### CreateUser success
+
+Panel
+
+![CreateUser success graph](./images/create_user_graph.png)
+
+Query
+
+![CreateUser success query](./images/create_user_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Successfully created user"."%") | sort time | timechart span=1m count by rate
+```
+
 # eCommerce Application
 
 In this project, you'll have an opportunity to demonstrate the security and DevOps skills that you learned in this lesson by completing an eCommerce application. You'll start with a template for the complete application, and your goal will be to take this template and add proper authentication and authorization controls so users can only access their data, and that data can only be accessed in a secure way. 
