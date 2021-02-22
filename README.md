@@ -1,4 +1,11 @@
 # Submission: Screenshots
+## Jenkins
+
+Created an EC2 instance, installed Docker and Jenkins following the instructions given in module. Added RSA credentials to both Github
+and Jenkins, and successfully built the application using Jenkins.
+
+![SuccessfulJenkinsBuild](./images/jenkins_successful_build.png)
+
 ## Splunk
 
 Logs were generated using the `spring-boot-starter-log4j2` library and configured via `log4j2-spring.xml`.
