@@ -1,0 +1,23 @@
+2021-02-21 16:48:11,504 INFO o.s.b.StartupInfoLogger [main] Starting SareetaApplicationTests on Davids-MacBook-Pro.local with PID 4439 (started by davidlimcheng in /Users/davidlimcheng/Learning/Repositories/udacity - java web developer/lesson5/nd035-c4-Security-and-DevOps/starter_code)
+2021-02-21 16:48:11,513 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-02-21 16:48:12,014 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-02-21 16:48:12,078 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55ms. Found 4 repository interfaces.
+2021-02-21 16:48:12,531 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8cc4ece1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-02-21 16:48:12,718 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-02-21 16:48:12,926 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-02-21 16:48:12,989 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-02-21 16:48:13,039 INFO o.h.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-02-21 16:48:13,041 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2021-02-21 16:48:13,216 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-02-21 16:48:13,334 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-21 16:48:13,979 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-21 16:48:14,612 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-21 16:48:14,715 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fecb076, org.springframework.security.web.context.SecurityContextPersistenceFilter@480994d3, org.springframework.security.web.header.HeaderWriterFilter@314c6f89, org.springframework.web.filter.CorsFilter@62159fd, org.springframework.security.web.authentication.logout.LogoutFilter@8ee1404, com.example.demo.security.JWTAuthenticationFilter@28e8dee7, com.example.demo.security.JWTAuthenticationVerificationFilter@7c37ac3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@795131d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@534d0cfa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2682cccc, org.springframework.security.web.session.SessionManagementFilter@52b30dcd, org.springframework.security.web.access.ExceptionTranslationFilter@1842dc39, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@375ff309]
+2021-02-21 16:48:15,058 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-21 16:48:15,290 INFO o.s.b.StartupInfoLogger [main] Started SareetaApplicationTests in 4.052 seconds (JVM running for 5.322)
+2021-02-21 16:48:15,392 INFO o.s.s.c.ExecutorConfigurationSupport [Thread-2] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-21 16:48:15,394 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-2] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-21 16:48:15,395 INFO c.z.h.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2021-02-21 16:48:15,397 INFO c.z.h.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
