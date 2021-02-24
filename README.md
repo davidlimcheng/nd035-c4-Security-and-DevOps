@@ -12,6 +12,83 @@ Logs were generated using the `spring-boot-starter-log4j2` library and configure
 Generated logs were manually uploaded to a local Splunk Enterprise instance, and fields were created, including "message".
 Most of the SPL queries are achieved with the "message" custom field.
 
+### CreateUser request successes
+
+Panel
+
+![CreateUser success graph](./images/create_user_success_graph.png)
+
+Query
+
+![CreateUser success query](./images/create_user_success_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Successfully created user"."%") | sort time | timechart span=1m count by rate
+```
+
+### CreateUser request failures
+
+Panel
+
+![CreateUser failure graph](./images/create_user_failure_graph.png)
+
+Query
+
+![CreateUser failure query](./images/create_user_failure_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Failed to create user"."%") | sort time | timechart span=1m count by rate
+```
+
+### Exceptions
+
+Panel
+
+![Exceptions](./images/exceptions_table.png)
+
+Query
+
+![Exceptions query](./images/exceptions_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Exception"."%") | sort time | chart count by message
+```
+
+### SubmitOrder request successes
+
+Panel
+
+![SubmitOrder success graph](./images/submit_order_successes_graph.png)
+
+Query
+
+![SubmitOrder success query](./images/submit_order_successes_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Successfully created user"."%") | sort time | timechart span=1m count by rate
+```
+
+### SubmitOrder request failures
+
+No failure events recorded in the specified time frame!
+
+Panel
+
+![SubmitOrder failure graph](./images/submit_order_failures_graph.png)
+
+Query
+
+![SubmitOrder failure query](./images/submit_order_failures_query.png)
+
+SPL
+```
+source="spring-boot-logger-log4j2.log" | where like(message,"%"."Failed submitted order"."%") | sort time
+```
+
 ### Errors per second
 
 Panel
@@ -25,21 +102,6 @@ Query
 SPL
 ```
 source="spring-boot-logger-log4j2.log" | where like(message,"%"."error"."%") | timechart span=1s count by rate
-```
-
-### CreateUser success
-
-Panel
-
-![CreateUser success graph](./images/create_user_graph.png)
-
-Query
-
-![CreateUser success query](./images/create_user_query.png)
-
-SPL
-```
-source="spring-boot-logger-log4j2.log" | where like(message,"%"."Successfully created user"."%") | sort time | timechart span=1m count by rate
 ```
 
 # eCommerce Application
